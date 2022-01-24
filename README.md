@@ -14,7 +14,7 @@ stages:
   - build
 
 docker-build-master:
-  image: guglio/dind-compose:latest
+  image: chr1slavery/dind-compose:latest
   stage: build
   services:
     - docker:19.03.4-dind
