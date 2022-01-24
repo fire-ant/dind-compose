@@ -4,7 +4,7 @@ ENV EDGE_MAIN http://dl-cdn.alpinelinux.org/alpine/edge/main
 ENV EDGE_COMMUNITY http://dl-cdn.alpinelinux.org/alpine/edge/community
 
 RUN apk update --repository=$EDGE_MAIN --repository=$EDGE_COMMUNITY \
-        && apk add py3-setuptools \
+        &&  apk add --update py3-pip \
 	&& apk --no-cache add git curl make python3 python3-dev gcc libc-dev libffi-dev \
         openssl-dev --repository=$EDGE_MAIN --repository=$EDGE_COMMUNITY \
 	&& pip3 --no-cache-dir install --upgrade pip \
